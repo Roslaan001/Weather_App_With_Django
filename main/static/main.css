@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h3 {
+    color: red;
+}
+
+
+@media screen and  (min-width: 300px)  and (max-width: 600px) {
+    div.result h1,h3,h5 {
+        margin-left: 4rem;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    div.result h1 {
+        font-size: 5rem;
+    }
+
+    form.space {
+        width: 85%;
+    }
+}
+
+
+
+@media screen and  (min-width: 600px)  and (max-width: 1200px) {
+    div.result h1,h3,h5 {
+        margin-left: 4rem;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    div.result h1 {
+        font-size: 5rem;
+    }
+
+    form.space {
+        width: 85%;
+    }
+}
