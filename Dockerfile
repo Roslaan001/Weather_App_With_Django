@@ -1,5 +1,5 @@
 # the base image
-FROM python:3.9
+FROM python:3.9.21-alpine3.21
 
 # Set the working directory
 WORKDIR /my-django-app
