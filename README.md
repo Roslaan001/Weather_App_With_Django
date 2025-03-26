@@ -2,6 +2,7 @@ Created this django app where users can check the weather of any city/country in
 
 
 The Dockerfile is as follows:
+```dockerfile
 # the base image
 FROM python:3.9.21-alpine3.21
 
