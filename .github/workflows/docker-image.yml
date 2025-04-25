@@ -13,8 +13,10 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - name: Install docker
-      run: sudo apt install docker.io -y
+    - name: Downloading docker from docker repository 
+      run: curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /usr/share/keyrings/docker-archive-keyring.gpg
+    - name: Installing Docker.....
+      run: sudo apt-get update && sudo apt-get install docker.io -y
     - name: Start the docker service
       run: sudo service docker start
 
@@ -24,3 +26,5 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag mydjangoapp:$(date +%s)
+ 
+
