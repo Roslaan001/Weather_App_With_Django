@@ -13,6 +13,14 @@ jobs:
     runs-on: self-hosted
 
     steps:
+    - name: Install docker
+      run: sudo apt install docker.io -y
+    - name: Start the docker service
+      run: sudo service docker start
+
+    - name: Add docker to user group
+      run: sudo usermod -aG docker ubuntu
+    
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag mydjangoapp:$(date +%s)
