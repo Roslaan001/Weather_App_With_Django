@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Downloading docker from docker repository 
-      run: curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /usr/share/keyrings/docker-archive-keyring.gpg
+      run: sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /usr/share/keyrings/docker-archive-keyring.gpg
     - name: Installing Docker.....
       run: sudo apt-get update && sudo apt-get install docker.io -y
     - name: Start the docker service
