@@ -1,17 +1,12 @@
 name: Building a docker Image with github actions 
-
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
 jobs:
-
   build:
-
     runs-on: self-hosted
-
     steps:
     - name: Downloading docker from docker repository 
       run: sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /usr/share/keyrings/docker-archive-keyring.gpg
