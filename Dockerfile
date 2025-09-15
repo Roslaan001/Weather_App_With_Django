@@ -1,10 +1,13 @@
 # the base image
-FROM python:3.9.21-alpine3.21
+FROM python:3.12-slim-bookworm
+
+#create the directory for the app
+RUN mkdir -p /my-django-app
 
 # Set the working directory
 WORKDIR /my-django-app
 
-# Copy the current directory contents into the container at /app
+# Copy the current directory contents into the container at /my-django-app
 COPY . /my-django-app
 
 # Install any needed packages specified in requirements.txt
@@ -15,4 +18,3 @@ EXPOSE 8000
 
 # Run the command to start the development server
 CMD [ "python", "manage.py", "runserver", "0.0.0.0:8000"]
-
