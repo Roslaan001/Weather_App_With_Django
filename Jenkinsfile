@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Logging in to the docker registry..'
                 withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASSWORD')]) {
-                    echo -n "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin docker.io
+                    echo -n $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin docker.io
                 }
             }
         }
