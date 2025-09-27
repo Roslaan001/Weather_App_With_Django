@@ -4,7 +4,7 @@ FROM python:3.12-slim-bookworm
 #create the directory for the app
 RUN mkdir -p /my-django-app
 
-# Set the working directory
+# Set the working directory for my app
 WORKDIR /my-django-app
 
 # Copy the current directory contents into the container at /my-django-app
