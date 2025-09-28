@@ -1,7 +1,7 @@
 # the base image
 FROM python:3.12-slim-bookworm
 
-#create the directory for the app
+#create the directory for my django app
 RUN mkdir -p /my-django-app
 
 # Set the working directory for my django app
