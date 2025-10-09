@@ -23,5 +23,26 @@ pipeline {
                 sh 'docker push abdulsomad005/mydjangoapp:2.1'
             }
         }
+        stage ("Logging in to the EC2 instance using SSH") {
+            steps {
+                script {
+                    echo "Sshing into the ec2 instance"
+                sshagent (credentials:['ssh-key']) {
+                sh '''
+                        Securely add host key to known_hosts to prevent MitM warnings and connection failures
+                        ssh-keyscan ec2-3-84-155-68.compute-1.amazonaws.com >> ~/.ssh/known_hosts
+
+
+                        ssh ubuntu@ec2-3-84-155-68.compute-1.amazonaws.com "sudo apt update && sudo apt upgrade -y"
+
+                        mkdir -p /home/ubuntu/mydjangoapp
+                        cd /home/ubuntu/mydjangoapp
+                        sudo docker pull abdulsomad005/mydjangoapp:2.1
+                        sudo docker run -d -p 8000:8000 abdulsomad005/mydjangoapp:2.1
+                    '''
+                }
+                }
+            }
+        }
     }
 }
