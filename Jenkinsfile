@@ -13,14 +13,14 @@ pipeline {
         stage('Build the docker image') {
             steps {
                 echo 'Building the docker image..'
-                sh 'docker build -t abdulsomad005/mydjangoapp:2.1 .'
+                sh 'docker build -t abdulsomad005/mydjangoapp:2.2 .'
 
             }
         }
         stage('Push the docker image to the registry(dockerhub)') {
             steps {
                 echo 'Pushing the docker image..'
-                sh 'docker push abdulsomad005/mydjangoapp:2.1'
+                sh 'docker push abdulsomad005/mydjangoapp:2.2'
             }
         }
         stage ("Logging in to the EC2 instance using SSH") {
@@ -37,8 +37,8 @@ pipeline {
 
                         mkdir -p /home/ubuntu/mydjangoapp
                         cd /home/ubuntu/mydjangoapp
-                        sudo docker pull abdulsomad005/mydjangoapp:2.1
-                        sudo docker run -d -p 8000:8000 abdulsomad005/mydjangoapp:2.1
+                        sudo docker pull abdulsomad005/mydjangoapp:2.2
+                        sudo docker run -d -p 8000:8000 abdulsomad005/mydjangoapp:2.2
                     '''
                 }
                 }
