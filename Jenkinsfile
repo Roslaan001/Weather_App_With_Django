@@ -29,6 +29,9 @@ pipeline {
                     echo "Sshing into the ec2 instance"
                 sshagent (credentials:['ssh-key']) {
                 sh '''
+
+                        mkdir -p ~/.ssh
+                        chmod 700 ~/.ssh
                        # Securely add host key to known_hosts to prevent MitM warnings and connection failures
                         ssh-keyscan ec2-3-84-155-68.compute-1.amazonaws.com >> ~/.ssh/known_hosts
 
