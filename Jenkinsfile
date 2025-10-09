@@ -36,12 +36,12 @@ pipeline {
                         ssh-keyscan ec2-3-84-155-68.compute-1.amazonaws.com >> ~/.ssh/known_hosts
 
 
-                        ssh ubuntu@ec2-3-84-155-68.compute-1.amazonaws.com "sudo apt update && sudo apt upgrade -y"
-
+                        ssh ubuntu@ec2-3-84-155-68.compute-1.amazonaws.com "
                         mkdir -p /home/ubuntu/mydjangoapp
                         cd /home/ubuntu/mydjangoapp
                         sudo docker pull abdulsomad005/mydjangoapp:2.1
                         sudo docker run -d -p 8000:8000 abdulsomad005/mydjangoapp:2.1
+                        "
                     '''
                 }
                 }
