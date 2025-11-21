@@ -36,6 +36,13 @@ ALLOWED_HOSTS = [
     'https://freezing-fact.pipeops.app'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.pipeops.net',
+    'https://*.pipeops.app',
+    'https://freezing-fact.pipeops.app',
+    'https://weather-app.pipeops.app',
+]
+
 
 # Application definition
 
