@@ -29,19 +29,19 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    '.pipeops.net', # all subdomains of pipeops.net
+    '.pipeops.net',
     '.pipeops.app',
     'weather-app.pipeops.app',
     'freezing-fact.pipeops.app',
-    'https://freezing-fact.pipeops.app'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://*.pipeops.net',
-    'https://*.pipeops.app',
+    'https://pipeops.net',
+    'https://pipeops.app',
     'https://freezing-fact.pipeops.app',
     'https://weather-app.pipeops.app',
 ]
+
 
 
 # Application definition
