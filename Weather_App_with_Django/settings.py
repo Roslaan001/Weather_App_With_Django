@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
     '.pipeops.app',
     'weather-app.pipeops.app',
     'freezing-fact.pipeops.app',
+    'https://freezing-fact.pipeops.app'
 ]
 
 
