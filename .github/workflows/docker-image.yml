@@ -8,12 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Downloading docker from docker repository 
-      run: sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /usr/share/keyrings/docker-archive-keyring.gpg
-    - name: Installing Docker.....
-      run: sudo apt-get update && sudo apt-get install docker.io -y
-    - name: Start the docker service
-      run: sudo service docker start
+    - name: Docker Setup Docker
+      uses: docker/setup-docker-action@v4.5.0
 
     - name: Add docker to user group
       run: sudo usermod -aG docker ubuntu
