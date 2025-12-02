@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
     '.pipeops.app',
     'weather-app.pipeops.app',
     'freezing-fact.pipeops.app',
+    'frightening-birds.pipeops.run',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -40,6 +41,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://pipeops.app',
     'https://freezing-fact.pipeops.app',
     'https://weather-app.pipeops.app',
+    'https://frightening-birds.pipeops.run',
 ]
 
 
