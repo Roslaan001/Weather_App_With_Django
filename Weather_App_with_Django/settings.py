@@ -27,21 +27,12 @@ SECRET_KEY = 'django-insecure--9$lv0k^yg9m#@+!^#x=6qi6j_8656wlh1h1$+56zh^-hrfm9w
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '.pipeops.net',
-    '.pipeops.app',
-    'weather-app.pipeops.app',
-    'freezing-fact.pipeops.app',
-    'frightening-birds.pipeops.run',
+    '*'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://pipeops.net',
-    'https://pipeops.app',
-    'https://freezing-fact.pipeops.app',
-    'https://weather-app.pipeops.app',
-    'https://frightening-birds.pipeops.run',
+    'https://*.pipeops.app',
+    'https://*.pipeops.run',
 ]
 
 
