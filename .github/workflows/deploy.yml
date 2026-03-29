@@ -1,0 +1,19 @@
+name: Deploy to PipeOps
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to PipeOps
+        uses: PipeOpsHQ/pipeops-action@v1
+        with:
+          pipeops-token: "sat_ohqfkn4tsdhl5uk5jmgbolidywnzl2ak"
+          project-id: 'your-project-id'
+          environment: 'production'
+          branch: ${{ github.ref_name }}
