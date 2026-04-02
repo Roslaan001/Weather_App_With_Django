@@ -19,5 +19,6 @@ jobs:
         run: |
           pipeops auth login --token "sat_ohqfkn4tsdhl5uk5jmgbolidywnzl2ak"
           pipeops deploy --project-id '7f830933-8c16-4367-bf75-5c0c88cb454a' --environment production --branch ${{ github.ref_name }}
-
+      - name: Check CLI commands
+        run: pipeops deploy --help
     
