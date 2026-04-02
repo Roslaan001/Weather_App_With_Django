@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Deploy to PipeOps
-        uses: PipeOpsHQ/pipeops-action@v1.0.0 
+        uses: PipeOpsHQ/pipeops-gh-action@v1 
         with:
           pipeops-token: "sat_ohqfkn4tsdhl5uk5jmgbolidywnzl2ak"
           project-id: 'your-project-id'
